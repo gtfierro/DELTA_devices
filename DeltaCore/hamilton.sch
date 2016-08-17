@@ -7232,6 +7232,16 @@ Source: www.farnell.com/datasheets/49238.pdf</description>
 <text x="-2.54" y="2.54" size="1.27" layer="25">&gt;NAME</text>
 <text x="-2.54" y="-3.81" size="1.27" layer="27">&gt;VALUE</text>
 </package>
+<package name="2-SMD-7.8-7-5">
+<smd name="P$1" x="0" y="2.5" dx="7.5" dy="3" layer="1"/>
+<smd name="P$2" x="0" y="-2.5" dx="7.5" dy="3" layer="1"/>
+<wire x1="-4" y1="4" x2="-4" y2="-4" width="0.127" layer="51"/>
+<wire x1="-4" y1="-4" x2="4" y2="-4" width="0.127" layer="51"/>
+<wire x1="4" y1="-4" x2="4" y2="4" width="0.127" layer="51"/>
+<wire x1="4" y1="4" x2="-4" y2="4" width="0.127" layer="51"/>
+<text x="-5.08" y="5.08" size="1.27" layer="25">&gt;Name</text>
+<text x="-5.08" y="-6.35" size="1.27" layer="27">&gt;Value</text>
+</package>
 </packages>
 <symbols>
 <symbol name="MOSFET_N">
@@ -7314,6 +7324,20 @@ Source: www.farnell.com/datasheets/49238.pdf</description>
 <text x="5.08" y="2.54" size="1.778" layer="95">&gt;NAME</text>
 <text x="5.08" y="-2.54" size="1.778" layer="96">&gt;VALUE</text>
 </symbol>
+<symbol name="L-US">
+<wire x1="0" y1="5.08" x2="1.27" y2="3.81" width="0.254" layer="94" curve="-90" cap="flat"/>
+<wire x1="0" y1="2.54" x2="1.27" y2="3.81" width="0.254" layer="94" curve="90" cap="flat"/>
+<wire x1="0" y1="2.54" x2="1.27" y2="1.27" width="0.254" layer="94" curve="-90" cap="flat"/>
+<wire x1="0" y1="0" x2="1.27" y2="1.27" width="0.254" layer="94" curve="90" cap="flat"/>
+<wire x1="0" y1="0" x2="1.27" y2="-1.27" width="0.254" layer="94" curve="-90" cap="flat"/>
+<wire x1="0" y1="-2.54" x2="1.27" y2="-1.27" width="0.254" layer="94" curve="90" cap="flat"/>
+<wire x1="0" y1="-2.54" x2="1.27" y2="-3.81" width="0.254" layer="94" curve="-90" cap="flat"/>
+<wire x1="0" y1="-5.08" x2="1.27" y2="-3.81" width="0.254" layer="94" curve="90" cap="flat"/>
+<text x="-1.27" y="-5.08" size="1.778" layer="95" rot="R90">&gt;NAME</text>
+<text x="3.81" y="-5.08" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
+<pin name="2" x="0" y="-7.62" visible="off" length="short" direction="pas" swaplevel="1" rot="R90"/>
+<pin name="1" x="0" y="7.62" visible="off" length="short" direction="pas" swaplevel="1" rot="R270"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="CSD16301Q2" prefix="Q">
@@ -7385,6 +7409,22 @@ Source: www.farnell.com/datasheets/49238.pdf</description>
 <connects>
 <connect gate="G$1" pin="ANODE" pad="ANODE"/>
 <connect gate="G$1" pin="CATHODE" pad="CATHODE"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="L-744787068" prefix="L">
+<gates>
+<gate name="G$1" symbol="L-US" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="2-SMD-7.8-7-5">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+<connect gate="G$1" pin="2" pad="P$2"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -7588,9 +7628,10 @@ Source: www.farnell.com/datasheets/49238.pdf</description>
 <part name="SUPPLY15" library="supply2" deviceset="GND" device=""/>
 <part name="C20" library="resistor" deviceset="C-EU" device="C0603" value="100nF"/>
 <part name="SUPPLY23" library="supply2" deviceset="GND" device=""/>
-<part name="C21" library="insole" deviceset="T491C686K010AT" device=""/>
+<part name="C21" library="insole" deviceset="T491C686K010AT" device="" value="100uF"/>
 <part name="C22" library="resistor" deviceset="C-EU" device="C0603" value="10uF"/>
 <part name="R11" library="resistor" deviceset="R-US_" device="R0603" value="1M"/>
+<part name="L2" library="insole" deviceset="L-744787068" device="" value="6.8uH"/>
 </parts>
 <sheets>
 <sheet>
@@ -7614,7 +7655,7 @@ Source: www.farnell.com/datasheets/49238.pdf</description>
 <text x="-12.7" y="-66.04" size="1.778" layer="91" rot="R180">NOTE: do not ground until after this point</text>
 <text x="-68.58" y="-106.68" size="1.778" layer="91">To hamilton</text>
 <text x="-121.92" y="-83.82" size="1.778" layer="91">LDO power</text>
-<text x="15.24" y="-83.82" size="1.778" layer="91">TODO: get inductor</text>
+<text x="-111.76" y="-76.2" size="1.778" layer="91">TODO: need control lines for the buttons from hamilton</text>
 </plain>
 <instances>
 <instance part="U1" gate="G$1" x="38.1" y="58.42"/>
@@ -7787,6 +7828,7 @@ Source: www.farnell.com/datasheets/49238.pdf</description>
 <instance part="C21" gate="G$1" x="114.3" y="-91.44"/>
 <instance part="C22" gate="G$1" x="101.6" y="-88.9"/>
 <instance part="R11" gate="G$1" x="129.54" y="-91.44" rot="R90"/>
+<instance part="L2" gate="G$1" x="22.86" y="-81.28" rot="R270"/>
 </instances>
 <busses>
 </busses>
@@ -8611,13 +8653,18 @@ Source: www.farnell.com/datasheets/49238.pdf</description>
 <junction x="20.32" y="-88.9"/>
 <label x="-5.08" y="-88.9" size="1.778" layer="95" rot="R180" xref="yes"/>
 <pinref part="C19" gate="G$1" pin="1"/>
-<wire x1="7.62" y1="-88.9" x2="0" y2="-88.9" width="0.1524" layer="91"/>
+<wire x1="7.62" y1="-88.9" x2="5.08" y2="-88.9" width="0.1524" layer="91"/>
+<wire x1="5.08" y1="-88.9" x2="0" y2="-88.9" width="0.1524" layer="91"/>
 <wire x1="0" y1="-88.9" x2="-5.08" y2="-88.9" width="0.1524" layer="91"/>
 <wire x1="0" y1="-88.9" x2="0" y2="-91.44" width="0.1524" layer="91"/>
 <junction x="0" y="-88.9"/>
 <pinref part="C20" gate="G$1" pin="1"/>
 <wire x1="7.62" y1="-88.9" x2="7.62" y2="-91.44" width="0.1524" layer="91"/>
 <junction x="7.62" y="-88.9"/>
+<pinref part="L2" gate="G$1" pin="2"/>
+<wire x1="15.24" y1="-81.28" x2="5.08" y2="-81.28" width="0.1524" layer="91"/>
+<wire x1="5.08" y1="-81.28" x2="5.08" y2="-88.9" width="0.1524" layer="91"/>
+<junction x="5.08" y="-88.9"/>
 </segment>
 </net>
 <net name="N$26" class="0">
@@ -8670,6 +8717,13 @@ Source: www.farnell.com/datasheets/49238.pdf</description>
 <junction x="129.54" y="-111.76"/>
 <wire x1="144.78" y1="-99.06" x2="149.86" y2="-99.06" width="0.1524" layer="91"/>
 <label x="149.86" y="-99.06" size="1.778" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="N$27" class="0">
+<segment>
+<pinref part="U9" gate="G$1" pin="SW"/>
+<pinref part="L2" gate="G$1" pin="1"/>
+<wire x1="40.64" y1="-81.28" x2="30.48" y2="-81.28" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
