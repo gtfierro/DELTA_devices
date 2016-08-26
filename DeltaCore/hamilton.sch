@@ -7791,6 +7791,8 @@ Source: http://www.irf.com/product-info/datasheets/data/irfr5305pbf.pdf</descrip
 <part name="Q8" library="fets" deviceset="NFET_AON7408" device=""/>
 <part name="JP8" library="pinhead" deviceset="PINHD-1X3" device="" value="PRU input"/>
 <part name="U5" library="Microchip_By_element14_Batch_1" deviceset="MCP73871-2AAI/ML" device=""/>
+<part name="R4" library="resistor" deviceset="R-US_" device="R0603" value="??"/>
+<part name="R15" library="resistor" deviceset="R-US_" device="R0603" value="??"/>
 </parts>
 <sheets>
 <sheet>
@@ -7976,6 +7978,8 @@ Source: http://www.irf.com/product-info/datasheets/data/irfr5305pbf.pdf</descrip
 <instance part="Q8" gate="G$1" x="-91.44" y="-220.98"/>
 <instance part="JP8" gate="A" x="-167.64" y="-7.62" rot="R180"/>
 <instance part="U5" gate="A" x="-93.98" y="-33.02"/>
+<instance part="R4" gate="G$1" x="-157.48" y="-30.48" rot="R90"/>
+<instance part="R15" gate="G$1" x="-157.48" y="-45.72" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -8176,6 +8180,10 @@ Source: http://www.irf.com/product-info/datasheets/data/irfr5305pbf.pdf</descrip
 <wire x1="-142.24" y1="-10.16" x2="-137.16" y2="-10.16" width="0.1524" layer="91"/>
 <junction x="-142.24" y="-10.16"/>
 <label x="-137.16" y="-10.16" size="1.778" layer="95" xref="yes"/>
+<pinref part="R15" gate="G$1" pin="1"/>
+<wire x1="-157.48" y1="-50.8" x2="-144.78" y2="-50.8" width="0.1524" layer="91"/>
+<wire x1="-144.78" y1="-50.8" x2="-144.78" y2="-25.4" width="0.1524" layer="91"/>
+<junction x="-144.78" y="-25.4"/>
 </segment>
 <segment>
 <pinref part="U8" gate="A" pin="GND_(TAB)"/>
@@ -8468,6 +8476,24 @@ Source: http://www.irf.com/product-info/datasheets/data/irfr5305pbf.pdf</descrip
 <wire x1="-177.8" y1="-154.94" x2="-177.8" y2="-160.02" width="0.1524" layer="91"/>
 <wire x1="-177.8" y1="-160.02" x2="-187.96" y2="-160.02" width="0.1524" layer="91"/>
 <label x="-187.96" y="-160.02" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U5" gate="A" pin="SEL"/>
+<wire x1="-116.84" y1="-40.64" x2="-121.92" y2="-40.64" width="0.1524" layer="91"/>
+<wire x1="-121.92" y1="-40.64" x2="-121.92" y2="-43.18" width="0.1524" layer="91"/>
+<pinref part="U5" gate="A" pin="PROG2"/>
+<wire x1="-121.92" y1="-43.18" x2="-116.84" y2="-43.18" width="0.1524" layer="91"/>
+<pinref part="U5" gate="A" pin="*TE"/>
+<wire x1="-116.84" y1="-45.72" x2="-121.92" y2="-45.72" width="0.1524" layer="91"/>
+<wire x1="-121.92" y1="-45.72" x2="-121.92" y2="-43.18" width="0.1524" layer="91"/>
+<junction x="-121.92" y="-43.18"/>
+<pinref part="U5" gate="A" pin="CE"/>
+<wire x1="-116.84" y1="-48.26" x2="-121.92" y2="-48.26" width="0.1524" layer="91"/>
+<wire x1="-121.92" y1="-48.26" x2="-121.92" y2="-45.72" width="0.1524" layer="91"/>
+<junction x="-121.92" y="-45.72"/>
+<wire x1="-121.92" y1="-48.26" x2="-127" y2="-48.26" width="0.1524" layer="91"/>
+<junction x="-121.92" y="-48.26"/>
+<label x="-127" y="-48.26" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="SWDIO" class="0">
@@ -8819,13 +8845,6 @@ Source: http://www.irf.com/product-info/datasheets/data/irfr5305pbf.pdf</descrip
 <junction x="5.08" y="-88.9"/>
 </segment>
 </net>
-<net name="N$26" class="0">
-<segment>
-<wire x1="-12.7" y1="-63.5" x2="-12.7" y2="-55.88" width="0.1524" layer="91"/>
-<wire x1="-15.24" y1="-58.42" x2="-12.7" y2="-55.88" width="0.1524" layer="91"/>
-<wire x1="-12.7" y1="-55.88" x2="-10.16" y2="-58.42" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="N$28" class="0">
 <segment>
 <pinref part="R9" gate="G$1" pin="1"/>
@@ -8886,25 +8905,6 @@ Source: http://www.irf.com/product-info/datasheets/data/irfr5305pbf.pdf</descrip
 <pinref part="JP7" gate="A" pin="1"/>
 <wire x1="-30.48" y1="-205.74" x2="-38.1" y2="-205.74" width="0.1524" layer="91"/>
 <label x="-38.1" y="-205.74" size="1.778" layer="95" rot="R180" xref="yes"/>
-</segment>
-<segment>
-<wire x1="-116.84" y1="-40.64" x2="-132.08" y2="-40.64" width="0.1524" layer="91"/>
-<wire x1="-132.08" y1="-40.64" x2="-132.08" y2="-43.18" width="0.1524" layer="91"/>
-<wire x1="-132.08" y1="-43.18" x2="-116.84" y2="-43.18" width="0.1524" layer="91"/>
-<wire x1="-116.84" y1="-45.72" x2="-132.08" y2="-45.72" width="0.1524" layer="91"/>
-<wire x1="-132.08" y1="-45.72" x2="-132.08" y2="-43.18" width="0.1524" layer="91"/>
-<junction x="-132.08" y="-43.18"/>
-<wire x1="-116.84" y1="-48.26" x2="-132.08" y2="-48.26" width="0.1524" layer="91"/>
-<wire x1="-132.08" y1="-48.26" x2="-132.08" y2="-45.72" width="0.1524" layer="91"/>
-<junction x="-132.08" y="-45.72"/>
-<pinref part="U5" gate="A" pin="SEL"/>
-<pinref part="U5" gate="A" pin="PROG2"/>
-<pinref part="U5" gate="A" pin="*TE"/>
-<pinref part="U5" gate="A" pin="CE"/>
-<wire x1="-132.08" y1="-48.26" x2="-132.08" y2="-50.8" width="0.1524" layer="91"/>
-<junction x="-132.08" y="-48.26"/>
-<wire x1="-132.08" y1="-50.8" x2="-134.62" y2="-50.8" width="0.1524" layer="91"/>
-<label x="-134.62" y="-50.8" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="LBO" class="0">
@@ -9076,14 +9076,46 @@ Source: http://www.irf.com/product-info/datasheets/data/irfr5305pbf.pdf</descrip
 <net name="RECT" class="0">
 <segment>
 <pinref part="JP8" gate="A" pin="1"/>
-<wire x1="-165.1" y1="-10.16" x2="-160.02" y2="-10.16" width="0.1524" layer="91"/>
-<wire x1="-160.02" y1="-10.16" x2="-160.02" y2="-15.24" width="0.1524" layer="91"/>
-<label x="-160.02" y="-15.24" size="1.778" layer="95" xref="yes"/>
+<wire x1="-165.1" y1="-10.16" x2="-157.48" y2="-10.16" width="0.1524" layer="91"/>
+<pinref part="R4" gate="G$1" pin="2"/>
+<wire x1="-157.48" y1="-10.16" x2="-157.48" y2="-25.4" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$1" class="0">
+<segment>
+<pinref part="R4" gate="G$1" pin="1"/>
+<pinref part="R15" gate="G$1" pin="2"/>
+<wire x1="-157.48" y1="-35.56" x2="-157.48" y2="-38.1" width="0.1524" layer="91"/>
+<pinref part="U5" gate="A" pin="VPCC"/>
+<wire x1="-157.48" y1="-38.1" x2="-157.48" y2="-40.64" width="0.1524" layer="91"/>
+<wire x1="-116.84" y1="-27.94" x2="-124.46" y2="-27.94" width="0.1524" layer="91"/>
+<wire x1="-124.46" y1="-27.94" x2="-124.46" y2="-38.1" width="0.1524" layer="91"/>
+<wire x1="-124.46" y1="-38.1" x2="-157.48" y2="-38.1" width="0.1524" layer="91"/>
+<junction x="-157.48" y="-38.1"/>
 </segment>
 </net>
 </nets>
 </sheet>
 </sheets>
+<errors>
+<approved hash="104,1,-10.16,58.42,X1,X1,N$4,,,"/>
+<approved hash="104,1,0,58.42,X1,X2,N$7,,,"/>
+<approved hash="104,1,-71.12,-43.18,U5,VSS_2,GND,,,"/>
+<approved hash="104,1,-71.12,-45.72,U5,VSS,GND,,,"/>
+<approved hash="208,1,147.32,50.8,+3V3,sup,,,,"/>
+<approved hash="208,1,93.98,40.64,+3V3,sup,,,,"/>
+<approved hash="208,1,99.06,73.66,+3V3,sup,,,,"/>
+<approved hash="208,1,134.62,43.18,+3V3,sup,,,,"/>
+<approved hash="208,1,60.96,93.98,+3V3,sup,,,,"/>
+<approved hash="208,1,22.86,50.8,+3V3,sup,,,,"/>
+<approved hash="208,1,88.9,53.34,+3V3,sup,,,,"/>
+<approved hash="208,1,76.2,35.56,+3V3,sup,,,,"/>
+<approved hash="208,1,-17.78,88.9,+3V3,sup,,,,"/>
+<approved hash="208,1,134.62,12.7,+3V3,sup,,,,"/>
+<approved hash="208,1,-91.44,-101.6,+3V3,out,,,,"/>
+<approved hash="206,1,-71.12,-22.86,OUT,,,,,"/>
+<approved hash="206,1,-71.12,-25.4,OUT,,,,,"/>
+</errors>
 </schematic>
 </drawing>
 <compatibility>
