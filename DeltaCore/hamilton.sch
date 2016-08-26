@@ -228,19 +228,6 @@
 <wire x1="-0.4826" y1="-0.4572" x2="-0.4826" y2="0.4572" width="0.127" layer="21"/>
 <text x="1.4478" y="-0.5334" size="1.27" layer="21">&gt;NAME</text>
 </package>
-<package name="APDS9007">
-<smd name="1" x="-1.15" y="0.7" dx="0.9" dy="0.8" layer="1" rot="R180"/>
-<smd name="3" x="1.15" y="0.7" dx="0.9" dy="0.8" layer="1" rot="R180"/>
-<smd name="6" x="-1.15" y="-0.7" dx="0.9" dy="0.8" layer="1" rot="R180"/>
-<smd name="4" x="1.15" y="-0.7" dx="0.9" dy="0.8" layer="1" rot="R180"/>
-<wire x1="-2" y1="1.4" x2="2" y2="1.4" width="0.127" layer="21"/>
-<wire x1="2" y1="1.4" x2="2" y2="-1.4" width="0.127" layer="21"/>
-<wire x1="2" y1="-1.4" x2="-2" y2="-1.4" width="0.127" layer="21"/>
-<wire x1="-2" y1="-1.4" x2="-2" y2="1.4" width="0.127" layer="21"/>
-<wire x1="-1.2" y1="1.8" x2="-2.4" y2="1.8" width="0.127" layer="21"/>
-<wire x1="-2.4" y1="1.8" x2="-2.4" y2="0.6" width="0.127" layer="21"/>
-<text x="-1.2" y="-3" size="1.27" layer="25">&gt;NAME</text>
-</package>
 <package name="MMA7660">
 <smd name="10" x="-1" y="1.24" dx="0.825" dy="0.3" layer="1" rot="R90"/>
 <smd name="9" x="-0.5" y="1.24" dx="0.825" dy="0.3" layer="1" rot="R90"/>
@@ -432,18 +419,6 @@
 <wire x1="0.508" y1="0" x2="0.508" y2="1.016" width="0.254" layer="94"/>
 <text x="-0.508" y="-3.048" size="1.27" layer="95">&gt;NAME</text>
 <text x="-2.54" y="2.54" size="1.27" layer="96">&gt;VALUE</text>
-</symbol>
-<symbol name="APDS9007">
-<pin name="VCC" x="-12.7" y="0" visible="pin" length="middle"/>
-<pin name="GND" x="12.7" y="-2.54" visible="pin" length="middle" rot="R180"/>
-<pin name="OUT" x="12.7" y="0" visible="pin" length="middle" rot="R180"/>
-<pin name="SD" x="-12.7" y="-2.54" visible="pin" length="middle"/>
-<wire x1="-7.62" y1="2.54" x2="-7.62" y2="-5.08" width="0.254" layer="94"/>
-<wire x1="-7.62" y1="-5.08" x2="7.62" y2="-5.08" width="0.254" layer="94"/>
-<wire x1="7.62" y1="-5.08" x2="7.62" y2="2.54" width="0.254" layer="94"/>
-<wire x1="7.62" y1="2.54" x2="-7.62" y2="2.54" width="0.254" layer="94"/>
-<text x="-7.62" y="3.048" size="1.27" layer="94">APDS9007</text>
-<text x="1.016" y="-6.858" size="1.27" layer="95">&gt;NAME</text>
 </symbol>
 <symbol name="MMA7660">
 <pin name="AVDD" x="-10.16" y="2.54" visible="pin" length="middle"/>
@@ -671,24 +646,6 @@
 <connects>
 <connect gate="G$1" pin="P$1" pad="P$1"/>
 <connect gate="G$1" pin="P$2" pad="P$2"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="APDS9007" prefix="U">
-<gates>
-<gate name="G$1" symbol="APDS9007" x="2.54" y="7.62"/>
-</gates>
-<devices>
-<device name="" package="APDS9007">
-<connects>
-<connect gate="G$1" pin="GND" pad="1"/>
-<connect gate="G$1" pin="OUT" pad="3"/>
-<connect gate="G$1" pin="SD" pad="6"/>
-<connect gate="G$1" pin="VCC" pad="4"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -7704,18 +7661,14 @@ Source: http://www.irf.com/product-info/datasheets/data/irfr5305pbf.pdf</descrip
 <part name="C2" library="storm" deviceset="0603_CAPACITOR" device="SMALL" value="20pF"/>
 <part name="SUPPLY3" library="supply2" deviceset="GND" device=""/>
 <part name="SUPPLY4" library="supply2" deviceset="GND" device=""/>
-<part name="U2" library="storm" deviceset="APDS9007" device=""/>
 <part name="U3" library="storm" deviceset="MMA7660FC" device=""/>
 <part name="R1" library="storm" deviceset="0603_RESISTOR" device="SMALL" value="3k6"/>
 <part name="R2" library="storm" deviceset="0603_RESISTOR" device="SMALL" value="3k6"/>
 <part name="+3V1" library="supply1" deviceset="+3V3" device=""/>
 <part name="+3V2" library="supply1" deviceset="+3V3" device=""/>
 <part name="+3V3" library="supply1" deviceset="+3V3" device=""/>
-<part name="+3V4" library="supply1" deviceset="+3V3" device=""/>
 <part name="SUPPLY5" library="supply2" deviceset="GND" device=""/>
-<part name="SUPPLY6" library="supply2" deviceset="GND" device=""/>
 <part name="SUPPLY7" library="supply2" deviceset="GND" device=""/>
-<part name="R3" library="storm" deviceset="0603_RESISTOR" device="SMALL" value="20k"/>
 <part name="U$1" library="storm" deviceset="JLINK_CONNECT" device=""/>
 <part name="SUPPLY8" library="supply2" deviceset="GND" device=""/>
 <part name="+3V5" library="supply1" deviceset="+3V3" device=""/>
@@ -7833,7 +7786,6 @@ Source: http://www.irf.com/product-info/datasheets/data/irfr5305pbf.pdf</descrip
 </instance>
 <instance part="SUPPLY3" gate="GND" x="-10.16" y="50.8"/>
 <instance part="SUPPLY4" gate="GND" x="0" y="50.8"/>
-<instance part="U2" gate="G$1" x="114.3" y="68.58"/>
 <instance part="U3" gate="G$1" x="114.3" y="35.56"/>
 <instance part="R1" gate="G$1" x="139.7" y="40.64" smashed="yes" rot="R90">
 <attribute name="NAME" x="138.43" y="42.418" size="1.27" layer="95" rot="R180"/>
@@ -7846,14 +7798,8 @@ Source: http://www.irf.com/product-info/datasheets/data/irfr5305pbf.pdf</descrip
 <instance part="+3V1" gate="G$1" x="147.32" y="53.34"/>
 <instance part="+3V2" gate="G$1" x="93.98" y="43.18"/>
 <instance part="+3V3" gate="G$1" x="134.62" y="45.72"/>
-<instance part="+3V4" gate="G$1" x="99.06" y="76.2"/>
 <instance part="SUPPLY5" gate="GND" x="93.98" y="30.48"/>
-<instance part="SUPPLY6" gate="GND" x="129.54" y="55.88"/>
 <instance part="SUPPLY7" gate="GND" x="137.16" y="27.94"/>
-<instance part="R3" gate="G$1" x="134.62" y="66.04" smashed="yes" rot="R90">
-<attribute name="NAME" x="138.43" y="66.548" size="1.27" layer="95" rot="R180"/>
-<attribute name="VALUE" x="138.938" y="65.024" size="1.27" layer="96" rot="R180"/>
-</instance>
 <instance part="U$1" gate="G$1" x="81.28" y="86.36"/>
 <instance part="SUPPLY8" gate="GND" x="53.34" y="81.28" rot="R270"/>
 <instance part="+3V5" gate="G$1" x="60.96" y="96.52" smashed="yes">
@@ -8037,16 +7983,6 @@ Source: http://www.irf.com/product-info/datasheets/data/irfr5305pbf.pdf</descrip
 <wire x1="132.08" y1="38.1" x2="137.16" y2="38.1" width="0.1524" layer="91"/>
 <pinref part="SUPPLY7" gate="GND" pin="GND"/>
 <wire x1="137.16" y1="38.1" x2="137.16" y2="30.48" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="U2" gate="G$1" pin="GND"/>
-<wire x1="127" y1="66.04" x2="129.54" y2="63.5" width="0.1524" layer="91"/>
-<pinref part="SUPPLY6" gate="GND" pin="GND"/>
-<wire x1="129.54" y1="63.5" x2="129.54" y2="60.96" width="0.1524" layer="91"/>
-<pinref part="R3" gate="G$1" pin="P$1"/>
-<wire x1="129.54" y1="60.96" x2="129.54" y2="58.42" width="0.1524" layer="91"/>
-<wire x1="134.62" y1="60.96" x2="129.54" y2="60.96" width="0.1524" layer="91"/>
-<junction x="129.54" y="60.96"/>
 </segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="GND"/>
@@ -8376,12 +8312,6 @@ Source: http://www.irf.com/product-info/datasheets/data/irfr5305pbf.pdf</descrip
 <wire x1="96.52" y1="38.1" x2="93.98" y2="40.64" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U2" gate="G$1" pin="VCC"/>
-<wire x1="101.6" y1="68.58" x2="99.06" y2="71.12" width="0.1524" layer="91"/>
-<pinref part="+3V4" gate="G$1" pin="+3V3"/>
-<wire x1="99.06" y1="71.12" x2="99.06" y2="73.66" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="U3" gate="G$1" pin="DVDD"/>
 <pinref part="+3V3" gate="G$1" pin="+3V3"/>
 <wire x1="132.08" y1="40.64" x2="134.62" y2="43.18" width="0.1524" layer="91"/>
@@ -8477,24 +8407,6 @@ Source: http://www.irf.com/product-info/datasheets/data/irfr5305pbf.pdf</descrip
 <wire x1="-177.8" y1="-160.02" x2="-187.96" y2="-160.02" width="0.1524" layer="91"/>
 <label x="-187.96" y="-160.02" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
-<segment>
-<pinref part="U5" gate="A" pin="SEL"/>
-<wire x1="-116.84" y1="-40.64" x2="-121.92" y2="-40.64" width="0.1524" layer="91"/>
-<wire x1="-121.92" y1="-40.64" x2="-121.92" y2="-43.18" width="0.1524" layer="91"/>
-<pinref part="U5" gate="A" pin="PROG2"/>
-<wire x1="-121.92" y1="-43.18" x2="-116.84" y2="-43.18" width="0.1524" layer="91"/>
-<pinref part="U5" gate="A" pin="*TE"/>
-<wire x1="-116.84" y1="-45.72" x2="-121.92" y2="-45.72" width="0.1524" layer="91"/>
-<wire x1="-121.92" y1="-45.72" x2="-121.92" y2="-43.18" width="0.1524" layer="91"/>
-<junction x="-121.92" y="-43.18"/>
-<pinref part="U5" gate="A" pin="CE"/>
-<wire x1="-116.84" y1="-48.26" x2="-121.92" y2="-48.26" width="0.1524" layer="91"/>
-<wire x1="-121.92" y1="-48.26" x2="-121.92" y2="-45.72" width="0.1524" layer="91"/>
-<junction x="-121.92" y="-45.72"/>
-<wire x1="-121.92" y1="-48.26" x2="-127" y2="-48.26" width="0.1524" layer="91"/>
-<junction x="-121.92" y="-48.26"/>
-<label x="-127" y="-48.26" size="1.778" layer="95" rot="R180" xref="yes"/>
-</segment>
 </net>
 <net name="SWDIO" class="0">
 <segment>
@@ -8586,14 +8498,6 @@ Source: http://www.irf.com/product-info/datasheets/data/irfr5305pbf.pdf</descrip
 <wire x1="33.02" y1="35.56" x2="30.48" y2="35.56" width="0.1524" layer="91"/>
 <label x="30.48" y="35.56" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
-<segment>
-<pinref part="U2" gate="G$1" pin="OUT"/>
-<wire x1="127" y1="68.58" x2="134.62" y2="68.58" width="0.1524" layer="91"/>
-<pinref part="R3" gate="G$1" pin="P$2"/>
-<wire x1="134.62" y1="68.58" x2="147.32" y2="68.58" width="0.1524" layer="91"/>
-<junction x="134.62" y="68.58"/>
-<label x="147.32" y="68.58" size="1.27" layer="95" xref="yes"/>
-</segment>
 </net>
 <net name="ACC" class="0">
 <segment>
@@ -8608,11 +8512,6 @@ Source: http://www.irf.com/product-info/datasheets/data/irfr5305pbf.pdf</descrip
 </segment>
 </net>
 <net name="SD" class="0">
-<segment>
-<pinref part="U2" gate="G$1" pin="SD"/>
-<wire x1="101.6" y1="66.04" x2="99.06" y2="66.04" width="0.1524" layer="91"/>
-<label x="99.06" y="66.04" size="1.27" layer="95" rot="R180" xref="yes"/>
-</segment>
 <segment>
 <pinref part="U1" gate="G$1" pin="PA28"/>
 <wire x1="73.66" y1="45.72" x2="76.2" y2="45.72" width="0.1524" layer="91"/>
@@ -8690,6 +8589,24 @@ Source: http://www.irf.com/product-info/datasheets/data/irfr5305pbf.pdf</descrip
 <label x="-137.16" y="-5.08" size="1.778" layer="95" xref="yes"/>
 <pinref part="U5" gate="A" pin="IN_2"/>
 <pinref part="U5" gate="A" pin="IN"/>
+</segment>
+<segment>
+<pinref part="U5" gate="A" pin="SEL"/>
+<wire x1="-116.84" y1="-40.64" x2="-121.92" y2="-40.64" width="0.1524" layer="91"/>
+<wire x1="-121.92" y1="-40.64" x2="-121.92" y2="-43.18" width="0.1524" layer="91"/>
+<pinref part="U5" gate="A" pin="PROG2"/>
+<wire x1="-121.92" y1="-43.18" x2="-116.84" y2="-43.18" width="0.1524" layer="91"/>
+<pinref part="U5" gate="A" pin="*TE"/>
+<wire x1="-116.84" y1="-45.72" x2="-121.92" y2="-45.72" width="0.1524" layer="91"/>
+<wire x1="-121.92" y1="-45.72" x2="-121.92" y2="-43.18" width="0.1524" layer="91"/>
+<junction x="-121.92" y="-43.18"/>
+<pinref part="U5" gate="A" pin="CE"/>
+<wire x1="-116.84" y1="-48.26" x2="-121.92" y2="-48.26" width="0.1524" layer="91"/>
+<wire x1="-121.92" y1="-48.26" x2="-121.92" y2="-45.72" width="0.1524" layer="91"/>
+<junction x="-121.92" y="-45.72"/>
+<wire x1="-121.92" y1="-48.26" x2="-127" y2="-48.26" width="0.1524" layer="91"/>
+<junction x="-121.92" y="-48.26"/>
+<label x="-127" y="-48.26" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="N$16" class="0">
