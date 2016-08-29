@@ -7802,7 +7802,6 @@ Source: http://www.irf.com/product-info/datasheets/data/irfr5305pbf.pdf</descrip
 <text x="123.19" y="13.208" size="1.27" layer="95">0x49</text>
 <text x="123.19" y="43.434" size="1.27" layer="95">0x4C</text>
 <text x="-167.64" y="2.54" size="1.778" layer="91">Input from Witricity PRU</text>
-<text x="-142.24" y="-55.88" size="1.778" layer="91">TODO: pull these high</text>
 <text x="-68.58" y="-106.68" size="1.778" layer="91">To hamilton</text>
 <text x="-121.92" y="-83.82" size="1.778" layer="91">LDO power</text>
 <text x="60.96" y="-73.66" size="1.778" layer="91">Boost +5V</text>
@@ -8539,13 +8538,6 @@ Source: http://www.irf.com/product-info/datasheets/data/irfr5305pbf.pdf</descrip
 <label x="-187.96" y="-154.94" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="LS" class="0">
-<segment>
-<pinref part="U1" gate="G$1" pin="PA08"/>
-<wire x1="33.02" y1="35.56" x2="30.48" y2="35.56" width="0.1524" layer="91"/>
-<label x="30.48" y="35.56" size="1.27" layer="95" rot="R180" xref="yes"/>
-</segment>
-</net>
 <net name="ACC" class="0">
 <segment>
 <pinref part="U3" gate="G$1" pin="!INT!"/>
@@ -8585,11 +8577,6 @@ Source: http://www.irf.com/product-info/datasheets/data/irfr5305pbf.pdf</descrip
 </segment>
 </net>
 <net name="OOB" class="0">
-<segment>
-<pinref part="U1" gate="G$1" pin="PA27"/>
-<wire x1="73.66" y1="40.64" x2="76.2" y2="40.64" width="0.1524" layer="91"/>
-<label x="76.2" y="40.64" size="1.27" layer="95" xref="yes"/>
-</segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="TDO/SWO"/>
 <wire x1="68.58" y1="78.74" x2="66.04" y2="78.74" width="0.1524" layer="91"/>
