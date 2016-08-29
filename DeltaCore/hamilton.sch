@@ -7803,12 +7803,8 @@ Source: http://www.irf.com/product-info/datasheets/data/irfr5305pbf.pdf</descrip
 <text x="123.19" y="43.434" size="1.27" layer="95">0x4C</text>
 <text x="-167.64" y="2.54" size="1.778" layer="91">Input from Witricity PRU</text>
 <text x="-142.24" y="-55.88" size="1.778" layer="91">TODO: pull these high</text>
-<text x="-129.54" y="-15.24" size="1.778" layer="91">TODO: adjust vpcc</text>
-<text x="-7.62" y="0" size="1.778" layer="91">TODO: adjust VCC,Gnd to come from LDO</text>
-<text x="-12.7" y="-66.04" size="1.778" layer="91" rot="R180">NOTE: do not ground until after this point</text>
 <text x="-68.58" y="-106.68" size="1.778" layer="91">To hamilton</text>
 <text x="-121.92" y="-83.82" size="1.778" layer="91">LDO power</text>
-<text x="-111.76" y="-76.2" size="1.778" layer="91">TODO: need control lines for the buttons from hamilton</text>
 <text x="60.96" y="-73.66" size="1.778" layer="91">Boost +5V</text>
 <text x="-101.6" y="-7.62" size="1.778" layer="91">Charging</text>
 </plain>
