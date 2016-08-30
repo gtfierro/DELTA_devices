@@ -6921,6 +6921,8 @@ Source: www.farnell.com/datasheets/49238.pdf</description>
 <smd name="PGND_3" x="-0.97" y="-2.4" dx="1.6" dy="0.4" layer="1" rot="R270"/>
 <smd name="P$17" x="0" y="0" dx="2.5" dy="2.5" layer="1"/>
 <circle x="-2.6" y="2.4" radius="0.22360625" width="0.127" layer="21"/>
+<text x="-3.81" y="3.81" size="1.27" layer="25">&gt;NAME</text>
+<text x="-3.81" y="-5.08" size="1.27" layer="27">&gt;VALUE</text>
 </package>
 <package name="6032">
 <wire x1="3" y1="-1.6" x2="3" y2="1.6" width="0.127" layer="21"/>
@@ -6942,8 +6944,8 @@ Source: www.farnell.com/datasheets/49238.pdf</description>
 <wire x1="-4" y1="-4" x2="4" y2="-4" width="0.127" layer="51"/>
 <wire x1="4" y1="-4" x2="4" y2="4" width="0.127" layer="51"/>
 <wire x1="4" y1="4" x2="-4" y2="4" width="0.127" layer="51"/>
-<text x="-5.08" y="5.08" size="1.27" layer="25">&gt;Name</text>
-<text x="-5.08" y="-6.35" size="1.27" layer="27">&gt;Value</text>
+<text x="-5.08" y="5.08" size="1.27" layer="25">&gt;NAME</text>
+<text x="-5.08" y="-6.35" size="1.27" layer="27">&gt;VALUE</text>
 </package>
 <package name="SOT629-1">
 <wire x1="2" y1="2" x2="2" y2="-2" width="0.127" layer="21"/>
@@ -7616,6 +7618,8 @@ Source: http://www.irf.com/product-info/datasheets/data/irfr5305pbf.pdf</descrip
 <wire x1="1.4" y1="2.1" x2="-1.4" y2="2.1" width="0.127" layer="21"/>
 <wire x1="-1.7" y1="-1.8" x2="-1.7" y2="-2.4" width="0.127" layer="21"/>
 <wire x1="-1.7" y1="-2.4" x2="-1.1" y2="-2.4" width="0.127" layer="21"/>
+<text x="-2.54" y="-2.54" size="1.27" layer="25" rot="R90">&gt;NAME</text>
+<text x="3.81" y="-2.54" size="1.27" layer="27" rot="R90">&gt;VALUE</text>
 </package>
 </packages>
 <symbols>
@@ -7740,7 +7744,7 @@ Source: http://www.irf.com/product-info/datasheets/data/irfr5305pbf.pdf</descrip
 <part name="R5" library="resistor" deviceset="R-US_" device="R0603" value="20k"/>
 <part name="R6" library="resistor" deviceset="R-US_" device="R0603" value="2k"/>
 <part name="C15" library="resistor" deviceset="C-EU" device="C0603" value="4.7uF"/>
-<part name="U$2" library="varistor" deviceset="NCP15XH103J03RC" device=""/>
+<part name="RT1" library="varistor" deviceset="NCP15XH103J03RC" device=""/>
 <part name="R7" library="resistor" deviceset="R-US_" device="R0603" value="2.2k"/>
 <part name="Q1" library="insole" deviceset="CSD16301Q2" device="" value=""/>
 <part name="Q2" library="insole" deviceset="CSD16301Q2" device="" value=""/>
@@ -7914,7 +7918,7 @@ Source: http://www.irf.com/product-info/datasheets/data/irfr5305pbf.pdf</descrip
 <instance part="R5" gate="G$1" x="-58.42" y="-45.72" rot="R90"/>
 <instance part="R6" gate="G$1" x="-50.8" y="-45.72" rot="R90"/>
 <instance part="C15" gate="G$1" x="-30.48" y="-45.72"/>
-<instance part="U$2" gate="G$1" x="-45.72" y="-35.56"/>
+<instance part="RT1" gate="G$1" x="-45.72" y="-35.56"/>
 <instance part="R7" gate="G$1" x="-17.78" y="-45.72" rot="R90"/>
 <instance part="Q1" gate="G$1" x="-5.08" y="-50.8" rot="R270"/>
 <instance part="Q2" gate="G$1" x="7.62" y="-50.8" rot="MR270"/>
@@ -8118,7 +8122,7 @@ Source: http://www.irf.com/product-info/datasheets/data/irfr5305pbf.pdf</descrip
 <wire x1="-58.42" y1="-53.34" x2="-50.8" y2="-53.34" width="0.1524" layer="91"/>
 <wire x1="-50.8" y1="-53.34" x2="-50.8" y2="-50.8" width="0.1524" layer="91"/>
 <junction x="-58.42" y="-53.34"/>
-<pinref part="U$2" gate="G$1" pin="1"/>
+<pinref part="RT1" gate="G$1" pin="1"/>
 <wire x1="-40.64" y1="-35.56" x2="-38.1" y2="-35.56" width="0.1524" layer="91"/>
 <wire x1="-38.1" y1="-35.56" x2="-38.1" y2="-53.34" width="0.1524" layer="91"/>
 <wire x1="-50.8" y1="-53.34" x2="-38.1" y2="-53.34" width="0.1524" layer="91"/>
@@ -8517,20 +8521,6 @@ Source: http://www.irf.com/product-info/datasheets/data/irfr5305pbf.pdf</descrip
 <label x="-187.96" y="-154.94" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="ACC" class="0">
-<segment>
-<pinref part="U3" gate="G$1" pin="!INT!"/>
-<wire x1="104.14" y1="33.02" x2="101.6" y2="33.02" width="0.1524" layer="91"/>
-<label x="101.6" y="33.02" size="1.27" layer="95" rot="R180" xref="yes"/>
-</segment>
-</net>
-<net name="SD" class="0">
-<segment>
-<pinref part="U1" gate="G$1" pin="PA28"/>
-<wire x1="73.66" y1="45.72" x2="76.2" y2="45.72" width="0.1524" layer="91"/>
-<label x="76.2" y="45.72" size="1.27" layer="95" xref="yes"/>
-</segment>
-</net>
 <net name="!RESET!" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="!RESET!"/>
@@ -8548,13 +8538,6 @@ Source: http://www.irf.com/product-info/datasheets/data/irfr5305pbf.pdf</descrip
 <pinref part="U1" gate="G$1" pin="AVDD"/>
 <pinref part="C3" gate="G$1" pin="P$1"/>
 <wire x1="27.94" y1="48.26" x2="33.02" y2="48.26" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="OOB" class="0">
-<segment>
-<pinref part="U$1" gate="G$1" pin="TDO/SWO"/>
-<wire x1="68.58" y1="78.74" x2="66.04" y2="78.74" width="0.1524" layer="91"/>
-<label x="66.04" y="78.74" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="N$5" class="0">
@@ -8634,7 +8617,7 @@ Source: http://www.irf.com/product-info/datasheets/data/irfr5305pbf.pdf</descrip
 </net>
 <net name="N$19" class="0">
 <segment>
-<pinref part="U$2" gate="G$1" pin="2"/>
+<pinref part="RT1" gate="G$1" pin="2"/>
 <wire x1="-71.12" y1="-35.56" x2="-50.8" y2="-35.56" width="0.1524" layer="91"/>
 <pinref part="U5" gate="A" pin="THERM"/>
 </segment>
@@ -9147,11 +9130,9 @@ Source: http://www.irf.com/product-info/datasheets/data/irfr5305pbf.pdf</descrip
 <approved hash="208,1,-17.78,88.9,+3V3,sup,,,,"/>
 <approved hash="208,1,134.62,12.7,+3V3,sup,,,,"/>
 <approved hash="208,1,-91.44,-101.6,+3V3,out,,,,"/>
-<approved hash="106,1,33.02,35.56,N$11,,,,,"/>
 <approved hash="106,1,33.02,33.02,N$12,,,,,"/>
 <approved hash="106,1,33.02,20.32,N$15,,,,,"/>
 <approved hash="106,1,33.02,17.78,N$17,,,,,"/>
-<approved hash="106,1,73.66,22.86,N$38,,,,,"/>
 <approved hash="106,1,73.66,30.48,N$42,,,,,"/>
 <approved hash="206,1,-71.12,-22.86,OUT,,,,,"/>
 <approved hash="206,1,-71.12,-25.4,OUT,,,,,"/>

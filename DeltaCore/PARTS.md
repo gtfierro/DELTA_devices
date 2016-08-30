@@ -5,7 +5,8 @@
 - LiPo Charging Chip: MCP73871 (1)
 - LDO: MCP1824 (1)
 - 5V Boost: TPS61092 (1):
-    https://www.digikey.com/product-detail/en/texas-instruments/TPS61092RSAR/296-15240-1-ND/566513
+    (discontinued) https://www.digikey.com/product-detail/en/texas-instruments/TPS61092RSAR/296-15240-1-ND/566513
+    (needs 220uF) https://www.digikey.com/product-detail/en/texas-instruments/TPS61032RSAR/296-16662-6-ND/748231
 - UVLO chip: BQ29718DSET (1)
 - **I2C chip:**
     https://www.digikey.com/product-detail/en/nxp-semiconductors/PCA9557BS,118/568-3398-1-ND/1125743
@@ -16,6 +17,8 @@
 
 Tantalum:
 https://www.digikey.com/product-detail/en/avx-corporation/TPSC107M010R0075/478-5236-1-ND/1913306
+
+220uF: https://www.digikey.com/product-detail/en/kemet/T491C227M010AT/399-11618-1-ND/4897371
 
 ## Inductor
 
