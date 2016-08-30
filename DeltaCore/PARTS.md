@@ -4,7 +4,8 @@
 
 - LiPo Charging Chip: MCP73871 (1)
 - LDO: MCP1824 (1)
-- 5V Boost: TPS61092 (1)
+- 5V Boost: TPS61092 (1):
+    https://www.digikey.com/product-detail/en/texas-instruments/TPS61092RSAR/296-15240-1-ND/566513
 - UVLO chip: BQ29718DSET (1)
 - **I2C chip:**
     https://www.digikey.com/product-detail/en/nxp-semiconductors/PCA9557BS,118/568-3398-1-ND/1125743
