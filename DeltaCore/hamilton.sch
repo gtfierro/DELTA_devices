@@ -8031,8 +8031,8 @@ Source: http://www.irf.com/product-info/datasheets/data/irfr5305pbf.pdf</descrip
 <part name="Q8" library="fets" deviceset="NFET_AON7408" device=""/>
 <part name="JP8" library="pinhead" deviceset="PINHD-1X3" device="" value="PRU input"/>
 <part name="U5" library="Microchip_By_element14_Batch_1" deviceset="MCP73871-2AAI/ML" device=""/>
-<part name="R4" library="resistor" deviceset="R-US_" device="R0603" value="??"/>
-<part name="R15" library="resistor" deviceset="R-US_" device="R0603" value="??"/>
+<part name="R4" library="resistor" deviceset="R-US_" device="R0603" value="110k"/>
+<part name="R15" library="resistor" deviceset="R-US_" device="R0603" value="523k"/>
 <part name="R3" library="resistor" deviceset="R-US_" device="R0402" value="20k"/>
 <part name="R16" library="resistor" deviceset="R-US_" device="R0402" value="5k"/>
 <part name="R13" library="resistor" deviceset="R-US_" device="R0402" value="68k"/>
